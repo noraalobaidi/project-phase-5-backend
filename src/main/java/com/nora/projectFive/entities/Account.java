@@ -10,29 +10,34 @@ public class Account {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int account_no;
+	private long account_no;
 	private float balance;
+	private long civil_id;
 	private String first_name;
 	private String last_name;
-	private String username;
+	private String fullname;
 	private String password;
 	
-	public Account() {
-	
+
+
+	public Account(long account_no) {
+		super();
+		this.account_no = account_no;
 	}
-	public Account(int account_no, float balance, String first_name, String last_name, String username,
+	public Account(long account_no, float balance, String first_name, String last_name, long civil_id,
 			String password) {
 		this.account_no = account_no;
 		this.balance = balance;
+		this.civil_id=civil_id;
 		this.first_name = first_name;
 		this.last_name = last_name;
-		this.username = username;
+		this.fullname = first_name+" "+last_name;
 		this.password = password;
 	}
-	public int getAccount_no() {
+	public long getAccount_no() {
 		return account_no;
 	}
-	public void setAccount_no(int account_no) {
+	public void setAccount_no(long account_no) {
 		this.account_no = account_no;
 	}
 	public float getBalance() {
@@ -53,18 +58,26 @@ public class Account {
 	public void setLast_name(String last_name) {
 		this.last_name = last_name;
 	}
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
+
 	public String getPassword() {
 		return password;
 	}
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public long getCivil_id() {
+		return civil_id;
+	}
+	public void setCivil_id(long civil_id) {
+		this.civil_id = civil_id;
+	}
+	public String getFullname() {
+		return fullname;
+	}
+	public void setFullname(String fullname) {
+		this.fullname = fullname;
+	}
+	
 	
 
 	
