@@ -15,11 +15,12 @@ public class Account {
 	private long civil_id;
 	private String first_name;
 	private String last_name;
-	private String fullname;
 	private String password;
 	
 
+	public Account() {
 
+	}
 	public Account(long account_no) {
 		super();
 		this.account_no = account_no;
@@ -31,7 +32,7 @@ public class Account {
 		this.civil_id=civil_id;
 		this.first_name = first_name;
 		this.last_name = last_name;
-		this.fullname = first_name+" "+last_name;
+
 		this.password = password;
 	}
 	public long getAccount_no() {
@@ -71,12 +72,7 @@ public class Account {
 	public void setCivil_id(long civil_id) {
 		this.civil_id = civil_id;
 	}
-	public String getFullname() {
-		return fullname;
-	}
-	public void setFullname(String fullname) {
-		this.fullname = fullname;
-	}
+
 	
 	
 
